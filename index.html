@@ -84,11 +84,23 @@
                For any queries Contact  &nbsp;<a href="tel:+919521888950">+919521888950 </a>
             </div>
             <div class="row d-flex justify-content-center mt-4">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvlAxe47ABuOwNbM_iavtD7FsJ4XFdvcCVRht8aq9C7v6fwQ/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe id="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSdvlAxe47ABuOwNbM_iavtD7FsJ4XFdvcCVRht8aq9C7v6fwQ/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </div>
         
     </body>
+        script type="text/javascript">
+var load = 0;
+
+document.getElementById('gform').onload = function(){
+    /*Execute on every reload on iFrame*/
+    load++;
+    if(load > 1){
+        /*Second reload is a submit*/
+        document.location = "https://www.google.com/";
+    }
+}
+</script>
     </html>
 
 
