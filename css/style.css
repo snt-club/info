@@ -1,0 +1,518 @@
+:root {
+  --primary-btn: #ef5a67;
+  --dark-blue: #022f84;
+  --light-blue: #053fa2;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #fff;
+  font-size: 16px;
+  cursor: default;
+  overflow: scroll;
+}
+
+p {
+  color: var(--dark-blue);
+}
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+em {
+  color: #ef5a67;
+  font-weight: 700;
+}
+
+.color-light {
+  background-color: #fff;
+}
+.navbar {
+  background-color: #022f84;
+  position: sticky;
+  width: 100%;
+}
+.navbar-brand img {
+  max-height: 60px;
+}
+.navbar .nav-item .nav-link {
+  color: #fff;
+}
+.navbar .nav-item .active {
+  color: #fff !important;
+  font-weight: 900;
+}
+
+.nav-item a {
+  margin: auto auto auto 10px;
+}
+
+.nav-link:hover {
+  color: #ef5a67 !important;
+}
+.navbar-toggler-icon {
+  color: #fff;
+}
+.btn {
+  border-radius: 0px;
+}
+
+.btn-red {
+  background-color: var(--primary-btn);
+  color: #fff;
+  font-weight: 900;
+}
+.btn-red-outline {
+  background-color: none;
+  color: #fff;
+  border: 1px solid var(--primary-btn);
+}
+.hero-bg {
+  /* background-color: linear-gradient(var(--light-blue), var(--dark-blue));
+  background-color: #022f84; */
+  height: 100vh;
+  max-height: 800px !important;
+  width: 100%;
+  overflow: hidden;
+  /* top:0;
+    left:0; */
+  /* position:absolute; */
+  /* z-index: -1; */
+}
+.hero {
+  height: 55vh;
+  min-height: 544px !important;
+  max-height: 744px;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  color: #fff;
+}
+.social {
+  background-color: #fff;
+  border-radius: 0px 70px 70px 0px;
+  position: absolute;
+  bottom: 0px;
+}
+.social img {
+  padding: 0.1rem;
+}
+
+.news-parent {
+  position: absolute;
+  bottom: -30%;
+}
+
+.news-letter {
+  background-color: #fff;
+  border-radius: 5px;
+  color: var(--dark-blue) !important;
+  margin-top: -35px;
+}
+.news-letter h1 {
+  color: var(--dark-blue) !important;
+}
+
+.form-button-hero:hover {
+  background-color: #ef5a67;
+  color: #fff;
+  border: #fff 1px solid;
+}
+
+.form-button:hover {
+  border: #ef5a67 1px solid;
+  color: #ef5a67;
+  background-color: transparent;
+  outline: none;
+}
+
+.statement {
+  color: #053fa2;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.why-us {
+  margin: 13rem auto 50px !important;
+}
+
+.web-carousel {
+  display: block;
+}
+
+.mobile-carousel {
+  display: none;
+}
+
+.blog {
+  margin: 50px auto 70px;
+}
+.blog-img-div img {
+  width: 100%;
+  height: 210px;
+  border-radius: 7px;
+}
+
+.blog-img-div img:hover{
+  transform: scale(1.5);
+  transition: 0.3s ease-in-out;
+  border: 3px solid #fff;
+}
+
+.team-parts p {
+  color: #fff;
+}
+
+.team-parts .row {
+  padding: 20px;
+  border-bottom: 1px solid #022f84;
+  text-align: center;
+  position: relative;
+}
+.team-parts .row:last-of-type {
+  border: none;
+}
+
+.team-parts img {
+  width: 150px;
+  height: 150px;
+  background-color: #ef5a67;
+  padding: 20px;
+  margin: auto;
+  border: #022f84 1px solid;
+}
+.team h2 {
+  text-align: center;
+  color: #022f84;
+}
+
+.a-des,
+.b-des,
+.c-des {
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.a-des,
+.c-des {
+  text-align: right;
+}
+
+.b-des {
+  text-align: left;
+}
+
+.mobile-view {
+  display: none;
+}
+.img-fluid{
+  width: 100%;
+  height: 100%;
+}
+.curr-event {
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  max-height: 338px;
+}
+.curr-event p {
+  color: #fff;
+}
+.event-card {
+  background-color: var(--dark-blue);
+}
+.course-card {
+  background-color: #fff;
+  color: var(--dark-blue);
+}
+.course-card h2 {
+  color: var(--dark-blue);
+}
+.course-bg {
+  position: relative;
+}
+.course-bg::before {
+  content: "";
+  /* background-color: var(--primary-btn); */
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+  transform: skewY(-5deg);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.profile-card {
+  background-color: var(--primary-btn);
+  color: var(--dark-blue);
+}
+.course-card .card-body {
+  position: relative;
+}
+.course-card .card-body::before {
+  content: "";
+  background-image: url("../img/course-arrow.svg");
+  background-size: 70px 70px;
+  position: absolute;
+  left: 45%;
+  top: -35px;
+  width: 70px;
+  height: 70px;
+}
+.profile-card::before {
+  content: "";
+  background-color: #fff;
+  border-radius: 25px;
+  background-image: url("../img/li.svg");
+  background-size: 50px 50px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 50px;
+  height: 50px;
+}
+
+.details h4 {
+  color: #022f84;
+  font-weight: bold;
+}
+.details h5 {
+  color: #022f84;
+  font-weight: bold;
+}
+.coordinator {
+  font-size: 3rem;
+  margin: 2rem 0 2rem;
+}
+
+.img-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+
+.img-container:hover .overlay {
+  transform: scale(1);
+  border-radius: 100%;
+}
+
+.text {
+  color: #022f84;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.team h2 {
+  margin: 20px auto 20px auto;
+}
+.members {
+  padding: 20px;
+}
+
+.members h3 {
+  color: #f33b4a83;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 70px;
+  text-decoration: underline;
+}
+
+.members p {
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  margin-top: 2rem;
+}
+.footer-logo {
+  width: 60%;
+  height: 50%;
+}
+.icons {
+  cursor: pointer;
+}
+.icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin: 1rem 0.5rem;
+  transition: 0.1s ease-in-out;
+}
+.icons img:hover {
+  transform: scale(1.2);
+}
+footer h5 {
+  font-weight: 700;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  background-color: #053fa2;
+  font-size: 0.9rem;
+}
+
+/*------------ PARALLAX EFFECT------- */
+
+.hero-bg,
+.team-parts {
+  /* position: relative; */
+  /* opacity: 0.75; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-bg {
+  background-image: linear-gradient(
+      0deg,
+      rgba(2, 47, 132, 0.3),
+      rgba(5, 63, 162, 0.3)
+    ),
+    url("../img/album/pic8.JPG");
+  min-height: 100%;
+}
+
+.team-parts {
+  background-image: url("../img/background2.jpg");
+  padding: 30px 70px 30px;
+}
+
+@media (max-width: 762px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  .curr-event {
+    max-height: none !important;
+  }
+
+  .carousel-inner .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  .course-bg::before {
+    height: 1200px;
+  }
+
+  .course-card .card-body::before {
+    content: "";
+    background-image: url("../img/course-arrow.svg");
+    background-size: 50px 50px;
+    position: absolute;
+    left: 45%;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .news-parent {
+    position: absolute;
+    bottom: -40%;
+  }
+
+  .why-us {
+    margin-top: 15rem !important;
+  }
+
+  .why-us p {
+    width: 100%;
+  }
+  .video-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-carousel {
+    display: block;
+  }
+
+  .web-carousel {
+    display: none;
+  }
+
+  .team h2 {
+    font-size: 30px;
+  }
+  .team-parts {
+    padding: 10px;
+  }
+  .team-parts p {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .web-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+
+  .members {
+    width: 50%;
+    text-align: center;
+  }
+  .members h3 {
+    font-size: 20px;
+    height: auto;
+    margin-top: 20px;
+  }
+  .footer-links a {
+    font-size: 0.7rem;
+  }
+
+  .footer-top-div {
+    width: 100%;
+  }
+  .footer-mid-div,
+  .footer-bottom-div {
+    width: 50%;
+    text-align: center;
+  }
+  .footer-copyright {
+    font-size: 0.6rem;
+  }
+}
