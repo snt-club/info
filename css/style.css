@@ -72,9 +72,9 @@ a.nav-link {
   border: 2px solid #ef5a67;
   text-align: center;
   border-radius: 10px;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
-#ogt:hover{
+#ogt:hover {
   box-shadow: 0 0 10px #fff;
 }
 .btn {
@@ -301,6 +301,56 @@ a.nav-link {
   color: #022f84;
   font-weight: bold;
 }
+
+/* ---------------tesimonials------------------- */
+.testimonials-web {
+  height: 30rem;
+  margin: auto auto 5rem;
+  display: block;
+}
+.testimonials-mobile {
+  display: none;
+  height: 17rem;
+  padding: 2rem;
+  margin: 1rem auto;
+  background-color: #022f84;
+  box-shadow: 5px 7px 10px grey;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.testimonials-mobile p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+.test {
+  padding: 2rem;
+  margin: 2rem auto 2rem;
+  background-color: #022f84;
+  box-shadow: 5px 7px 10px grey;
+  border-radius: 7px;
+  text-align: center;
+  width: 25rem;
+  align-items: center;
+}
+.test-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  align-items: center !important;
+}
+.test p {
+  color: #ffffff;
+}
+.test-des {
+  line-height: 2;
+}
+.test-rating {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
 .faculty h4 {
   margin-top: 20px;
 }
@@ -544,7 +594,6 @@ footer h5 {
   .info-container h5 {
     margin: 0;
   }
-
   .team-parts .row {
     padding: 15px 0px;
   }
@@ -568,6 +617,12 @@ footer h5 {
     right: 20%;
     top: 30%;
     width: 50px;
+  }
+  .testimonials-mobile {
+    display: block;
+  }
+  .testimonials-web {
+    display: none;
   }
 }
 
@@ -614,7 +669,15 @@ footer h5 {
   .web-carousel {
     display: none;
   }
-
+  .testimonials-mobile {
+    display: block;
+  }
+  .testimonials-web {
+    display: none;
+  }
+  .testimonial-heading {
+    text-align: center;
+  }
   .team-parts {
     padding: 10px;
   }
