@@ -305,12 +305,11 @@ a.nav-link {
 /* ---------------tesimonials------------------- */
 .testimonials-web {
   height: 30rem;
-  margin: auto auto 5rem;
+  margin: auto;
   display: block;
 }
 .testimonials-mobile {
   display: none;
-  height: 17rem;
   padding: 2rem;
   margin: 1rem auto;
   background-color: #022f84;
@@ -356,7 +355,7 @@ a.nav-link {
 }
 .coordinator {
   font-size: 3rem;
-  margin: 2rem 0 2rem;
+  margin: 1rem 0 2rem;
 }
 
 .img-container {
@@ -678,6 +677,7 @@ footer h5 {
   .testimonial-heading {
     text-align: center;
   }
+
   .team-parts {
     padding: 10px;
   }
