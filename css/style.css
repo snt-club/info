@@ -264,6 +264,7 @@ a.nav-link {
 }
 .course-card .card-body {
   position: relative;
+  transition: 2s;
 }
 .course-card .card-body:hover {
   box-shadow: 0 0 8px rgb(104, 104, 104);
@@ -275,6 +276,7 @@ a.nav-link {
   right: 20%;
   top: 50%;
   z-index: 1;
+  transition: .5s linear;
 }
 .course-arrow:hover {
   transform: scale(1.2);
