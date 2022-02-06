@@ -18,6 +18,16 @@ ul {
 .rounds {
   list-style: circle;
 }
+
+.page-header .meetingLink {
+  text-decoration: none;
+  color: #202c45;
+}
+
+.page-header .meetingLink:hover {
+  color: #0952d1;
+}
+
 /* h1,
 h2,
 h3,
@@ -390,7 +400,7 @@ a:focus {
   height: 30em;
 }
 
-.imagecontent{
+.imagecontent {
   width: 60em;
   display: block;
   margin-left: auto;
@@ -398,7 +408,7 @@ a:focus {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-.image{
+.image {
   width: inherit;
   height: 50%;
 }
