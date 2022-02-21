@@ -276,7 +276,7 @@ a.nav-link {
   right: 20%;
   top: 50%;
   z-index: 1;
-  transition: .5s linear;
+  transition: 0.5s linear;
 }
 .course-arrow:hover {
   transform: scale(1.2);
@@ -509,7 +509,7 @@ footer h5 {
       rgba(2, 47, 132, 0.3),
       rgba(5, 63, 162, 0.3)
     ),
-    url("../img/background3.png");
+    url("../img/background3.jpg");
   padding: 30px 70px 30px;
 }
 .social-media {
