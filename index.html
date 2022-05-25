@@ -1061,14 +1061,20 @@
 
     <!-- Copyright -->
     <div id="copyright" class="footer-copyright text-center py-3">
-      &copy; Copyright 2021 @ Science and Technology Club, SKIT Jaipur
     </div>
     <!-- Copyright -->
-
   </footer>
   <!-- Footer -->
 
 </body>
+<script>
+  const paragraph = `
+    <p>
+      &copy; Copyright ${new Date().getFullYear()} @ Science and Technology Club, SKIT Jaipur
+    </p>
+  `;
+  document.getElementById("copyright").innerHTML = paragraph;
+</script>
 <script src="js/script.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
