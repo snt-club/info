@@ -2,6 +2,11 @@
   --primary-btn: #ef5a67;
   --dark-blue: #022f84;
   --light-blue: #053fa2;
+  --color-light: rgba(0, 0, 0, 0.3);
+  --color-dark: #363949;
+  --box-shadow-0: 0 0.5rem 1.5rem var(--color-light);
+  --box-shadow-1: 0 1rem 3rem var(--color-light);
+  --box-shadow-2: 0 2rem 3rem var(--color-light);
 }
 * {
   margin: 0px;
@@ -38,7 +43,7 @@ em {
 }
 .navbar {
   background-color: #022f84;
-  position: sticky;
+  position: sticky-top;
   width: 100%;
 }
 .navbar-brand img {
@@ -72,9 +77,9 @@ a.nav-link {
   border: 2px solid #ef5a67;
   text-align: center;
   border-radius: 10px;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
-#ogt:hover{
+#ogt:hover {
   box-shadow: 0 0 10px #fff;
 }
 .btn {
@@ -101,6 +106,7 @@ a.nav-link {
   min-height: 544px !important;
   max-height: 744px;
   margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 .hero h1 {
   color: #fff;
@@ -108,7 +114,7 @@ a.nav-link {
 
 .news-parent {
   position: absolute;
-  top: 100%;
+  top: 90%;
   margin: auto;
   width: 100%;
 }
@@ -119,6 +125,7 @@ a.nav-link {
   margin-top: -35px;
 }
 .news-letter h1 {
+  font-family: 'Playfair Display', serif;
   color: var(--dark-blue) !important;
 }
 .mobile-newsletter {
@@ -143,6 +150,8 @@ a.nav-link {
 }
 
 .statement {
+  margin: auto;
+  width: 80%;
   color: #053fa2;
   text-align: center;
   padding-top: 20px;
@@ -150,6 +159,14 @@ a.nav-link {
 
 .why-us {
   margin: 15rem auto 3rem !important;
+}
+
+.why-us h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.des p {
+  text-align: justify;
 }
 
 .web-carousel {
@@ -165,9 +182,13 @@ a.nav-link {
 }
 .blog-img-div img {
   width: 100%;
-  height: 210px;
   border-radius: 7px;
 }
+
+.team-heading {
+  font-family: 'Playfair Display', serif;
+}
+
 .team-parts p {
   color: #fff;
 }
@@ -212,8 +233,9 @@ a.nav-link {
   display: none;
 }
 .live-events {
+  font-family: 'Playfair Display', serif;
   margin: auto;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
 }
 .img-fluid {
   width: 100%;
@@ -224,7 +246,13 @@ a.nav-link {
   background-color: var(--dark-blue);
   border-radius: 5px;
   max-height: 338px;
+  box-shadow: var(--box-shadow-2);
 }
+
+.curr-event:hover {
+  box-shadow: none;
+}
+
 .curr-event p {
   color: #fff;
 }
@@ -232,11 +260,22 @@ a.nav-link {
   background-color: var(--dark-blue);
 }
 
+.course-heading {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
 .course-card {
   height: 100%;
   background-color: #fff;
   color: var(--dark-blue);
+  box-shadow: var(--box-shadow-0);
 }
+
+.course-card:hover {
+  box-shadow: none;
+}
+
 .course-card h2 {
   color: var(--dark-blue);
 }
@@ -262,12 +301,7 @@ a.nav-link {
   display: flex;
   flex-grow: 1;
 }
-.course-card .card-body {
-  position: relative;
-}
-.course-card .card-body:hover {
-  box-shadow: 0 0 8px rgb(104, 104, 104);
-}
+
 .course-arrow {
   /* content: ""; */
   /* background-image: url("../img/course-arrow.svg"); */
@@ -275,6 +309,7 @@ a.nav-link {
   right: 20%;
   top: 50%;
   z-index: 1;
+  transition: 0.5s linear;
 }
 .course-arrow:hover {
   transform: scale(1.2);
@@ -301,16 +336,87 @@ a.nav-link {
   color: #022f84;
   font-weight: bold;
 }
+
+/* ---------------tesimonials------------------- */
+.testimonial-heading h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.testimonials-web {
+  height: 25rem;
+  margin: 50px auto 70px;
+  display: block;
+}
+.testimonials-mobile {
+  display: none;
+  padding: 2rem;
+  margin: 1rem auto;
+  background-color: #022f84;
+  box-shadow: 5px 7px 10px grey;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.testimonials-mobile p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+.test {
+  padding: 2rem;
+  margin: 2rem auto 2rem;
+  background-color: #022f84;
+  box-shadow: 5px 7px 10px grey;
+  border-radius: 7px;
+  text-align: center;
+  width: 25rem;
+  align-items: center;
+}
+.test-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  align-items: center !important;
+}
+.test p {
+  color: #ffffff;
+}
+.test-des {
+  line-height: 2;
+}
+.test-rating {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.faculty img{ 
+  box-shadow: var(--box-shadow-1);
+}
+
+.faculty img:hover { 
+  box-shadow: none;
+}
+
 .faculty h4 {
   margin-top: 20px;
 }
 .coordinator {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
   font-size: 3rem;
-  margin: 2rem 0 2rem;
+  margin: 1rem 0 2rem;
 }
 
 .img-container {
   position: relative;
+}
+
+.img-container img {
+  box-shadow: var(--box-shadow-1);
+}
+
+.img-container img:hover {
+  box-shadow: none;
 }
 
 .overlay {
@@ -344,10 +450,16 @@ a.nav-link {
 .info-container {
   margin-top: 10px;
 }
+
 .info-container h5 {
   padding-top: 0;
   margin: 10px;
 }
+
+.info-container p{
+  margin: 0;
+}
+
 .info-container a img {
   width: 30px;
   margin: auto 5px auto;
@@ -362,6 +474,7 @@ a.nav-link {
   padding: 30px 75px;
 }
 .team h2 {
+  font-family: 'Playfair Display', serif;
   text-align: center;
   font-size: 3rem;
   color: #022f84;
@@ -395,9 +508,14 @@ a.nav-link {
 }
 footer {
   background-color: var(--dark-blue);
+  color: white;
 }
+
+footer h5 {
+  font-family: 'Koulen', cursive;
+}
+
 .footer-logo {
-  width: 50%;
   height: 50%;
 }
 .icons {
@@ -420,14 +538,40 @@ footer h5 {
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 .footer-links a:hover {
   text-decoration: underline;
 }
 
+.footer-links {
+  cursor: pointer;
+}
+.footer-links img {
+  width: 32px;
+  height: 32px;
+  margin: 1rem 0.5rem;
+  transition: 0.1s ease-in-out;
+}
+.footer-links img:hover {
+  transform: scale(1.2);
+}
+
+hr{
+  width: 90%;
+  margin: auto;
+  opacity: 100;
+  bo
+}
+
 .footer-copyright {
-  background-color: #053fa2;
+  background-color: var(--dark-blue)2;
   font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  color: #ffffff;
 }
 
 /*------------ PARALLAX EFFECT------- */
@@ -458,12 +602,12 @@ footer h5 {
       rgba(2, 47, 132, 0.3),
       rgba(5, 63, 162, 0.3)
     ),
-    url("../img/background3.png");
+    url("../img/background3.jpg");
   padding: 30px 70px 30px;
 }
 .social-media {
   position: fixed;
-  top: 450px;
+  top: 25%;
   right: 0;
 }
 .social-media a {
@@ -544,7 +688,6 @@ footer h5 {
   .info-container h5 {
     margin: 0;
   }
-
   .team-parts .row {
     padding: 15px 0px;
   }
@@ -568,6 +711,12 @@ footer h5 {
     right: 20%;
     top: 30%;
     width: 50px;
+  }
+  .testimonials-mobile {
+    display: block;
+  }
+  .testimonials-web {
+    display: none;
   }
 }
 
@@ -613,6 +762,15 @@ footer h5 {
 
   .web-carousel {
     display: none;
+  }
+  .testimonials-mobile {
+    display: block;
+  }
+  .testimonials-web {
+    display: none;
+  }
+  .testimonial-heading {
+    text-align: center;
   }
 
   .team-parts {
