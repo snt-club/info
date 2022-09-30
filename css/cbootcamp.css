@@ -680,6 +680,11 @@ a:focus {
   align-items: center;
 }
 
+.page-header li ul li {
+  color: #000000;
+  font-size: 2em;
+}
+
 .page-header a:last-child::after {
   display: none;
 }
