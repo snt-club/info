@@ -684,6 +684,10 @@ a:focus {
   color: #000000;
   font-size: 2em;
 }
+.page-header a {
+  color: blue;
+  font-size: 0.8em;
+}
 
 .page-header a:last-child::after {
   display: none;
