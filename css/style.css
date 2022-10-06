@@ -28,6 +28,11 @@ h2 {
   font-weight: 700;
   color: #fff;
 }
+
+h6 {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
 em {
   color: #ef5a67;
   font-weight: 700;
@@ -360,19 +365,22 @@ a.nav-link {
   margin: 1rem 0 2rem;
 }
 
+
+
 .img-container {
   position: relative;
 }
 
 .overlay {
   position: absolute;
+  margin: 0 auto;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.7);
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   transform: scale(0);
   transition: 0.3s ease;
 }
@@ -384,7 +392,7 @@ a.nav-link {
 .text {
   color: #022f84;
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 900;
   position: absolute;
   top: 50%;
@@ -394,8 +402,9 @@ a.nav-link {
 }
 .info-container {
   margin-top: 10px;
+  padding-bottom: 2rem;
 }
-.info-container h5 {
+.info-container h6 {
   padding-top: 0;
   margin: 10px;
 }
@@ -418,6 +427,12 @@ a.nav-link {
   color: #022f84;
   margin-bottom: 1rem;
 }
+
+.member {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .members {
   padding: 20px;
   border-right: 1px solid #a8c6fd;
@@ -476,9 +491,19 @@ footer h5 {
   text-decoration: underline;
 }
 
+hr{
+  width: 90%;
+  margin: auto;
+  opacity: 100;
+}
+
 .footer-copyright {
-  background-color: #053fa2;
+  background-color: var(--dark-blue)2;
   font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  color: #ffffff;
 }
 
 /*------------ PARALLAX EFFECT------- */
@@ -599,7 +624,7 @@ footer h5 {
     padding: 15px 0px;
   }
   .members {
-    width: 50%;
+    width: 80%;
     text-align: center;
     border: none;
   }
