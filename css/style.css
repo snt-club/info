@@ -365,7 +365,9 @@ a.nav-link {
   margin: 1rem 0 2rem;
 }
 
-
+.st {
+  display: flex;
+}
 
 .img-container {
   position: relative;
@@ -426,6 +428,14 @@ a.nav-link {
   font-size: 3rem;
   color: #022f84;
   margin-bottom: 1rem;
+}
+
+.st-web{
+  display: block;
+}
+
+.st-mobile{
+  display: none;
 }
 
 .member {
@@ -589,6 +599,14 @@ hr{
     top: 44%;
     right: 20%;
   }
+
+  .st-web{
+    display: block;
+  }
+
+  .st-mobile{
+    display: none;
+  }
 }
 
 @media (max-width: 1070px) {
@@ -623,6 +641,15 @@ hr{
   .team-parts .row {
     padding: 15px 0px;
   }
+
+  .st-web{
+    display: block;
+  }
+
+  .st-mobile{
+    display: none;
+  }
+  
   .members {
     width: 80%;
     text-align: center;
@@ -637,6 +664,7 @@ hr{
     text-align: center;
   }
 }
+
 @media (max-width: 995px) {
   .course-arrow {
     position: absolute;
@@ -648,6 +676,14 @@ hr{
     display: block;
   }
   .testimonials-web {
+    display: none;
+  }
+
+  .st-web{
+    display: block;
+  }
+
+  .st-mobile{
     display: none;
   }
 }
@@ -708,6 +744,7 @@ hr{
   .team-parts {
     padding: 10px;
   }
+
   .a-des,
   .b-des,
   .c-des {
@@ -730,6 +767,15 @@ hr{
   .team h2 {
     font-size: 30px;
   }
+
+  .st-web{
+    display: none;
+  }
+
+  .st-mobile{
+    display: block;
+  }
+
   .members {
     width: 50%;
     text-align: center;
@@ -775,6 +821,14 @@ hr{
     width: 48px;
     height: 48px;
   }
+
+  .st-web{
+    display: none;
+  }
+
+  .st-mobile{
+    display: block;
+  }
 }
 
 @media (max-width: 450px) {
@@ -795,5 +849,13 @@ hr{
     top: 30%;
     width: 3em;
     height: 3em;
+  }
+
+  .st-web{
+    display: none;
+  }
+
+  .st-mobile{
+    display: block;
   }
 }
