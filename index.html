@@ -91,7 +91,7 @@
           <em id="typewriter"> </em>
         </div>
       </h1>
-      <a href="register.html" target="_blank"><button class="btn btn-lg btn-red-outline form-button-hero">Register
+      <a href="/club-reg.html"><button class="btn btn-lg btn-red-outline form-button-hero">Register
           Here</button>
       </a>
       <!-- https://forms.gle/T7ZCF3Sd6T3vfm9i7 -->
@@ -1360,6 +1360,31 @@
   </footer>
   <!-- Footer -->
 
+  <!-- MODAL -->
+  <div class="modal fade in" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Club Registration</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row">
+          <div class="col">
+            <img src="/img/register-modal.png" alt="">
+          </div>
+          <div class="col">
+            <h3>Welcome 1st year Students</h3>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="/club-reg.html"><button type="button rounded" class="btn btn-danger">Register Now</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL END -->
+
 </body>
 <script>
   const paragraph = `
@@ -1368,6 +1393,11 @@
     </p>
   `;
   document.getElementById("copyright").innerHTML = paragraph;
+</script>
+<script>
+  $(document).ready(function(){
+        $("#myModal").modal('show');
+    });
 </script>
 <script src="js/script.js"></script>
 <script src="js/bootstrap.min.js"></script>

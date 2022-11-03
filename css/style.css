@@ -609,6 +609,16 @@ hr{
   }
 }
 
+/* MODAL */
+
+.modal-body img {
+  width: 100%;
+}
+
+.modal-body h3 {
+  color: var(--dark-blue);
+}
+
 @media (max-width: 1070px) {
   .news-parent {
     position: absolute;
