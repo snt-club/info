@@ -27,6 +27,18 @@ h2 {
   color: var(--dark-blue);
 }
 
+h4 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
 /* NAVBAR */
 .navbar {
   background-color: #022f84;
@@ -76,15 +88,78 @@ a.nav-link {
   box-shadow: 0 0 10px #fff;
 }
 
+.top-bar {
+  position: relative;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
 /* MAIN */
 main {
   color: black;
   height: fit-content;
   padding: 4rem ;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.nav-pills .nav-item{
+  padding: 0 1rem;
+}
+
+.tab-bar{
+  width: 100%;
+  padding: 2rem;
+}
+
+.tab-bar a {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* .tab-links {
+  color: var(--dark-blue);
+  background-color: red;
+}
+
+.tab-links:hover {
+  color: var(--dark-blue);
+} */
+
+.nav-pills .nav-item .tab-links {
+  color: var(--dark-blue);
+  transition: 0.05s ease-in-out;
+}
+
+.nav-pills .nav-item .tab-links.active {
+  background-color: var(--dark-blue);
+  color: #ffffff;
+
+}
+
+.nav-pills .nav-item .tab-links:hover {
+  color: #ffffff !important;
+  background-color: var(--dark-blue);
+  transition: 0.05s ease-in-out;
+}
+
+.nav-pills .nav-item .tab-links:hover :not(.active) {
+  color: #ffffff !important;
+  background-color: #2a63d4a6 !important;
+  transition: 0.05s ease-in-out;
+}
+
+#pills-profile-tab {
+  cursor: not-allowed;
+  background-color: #ffffff;
+  color: gray;
+}
+
+#pills-profile-tab:hover {
+  cursor: not-allowed;
+  background-color: #ffffff !important;
+  color: gray !important;
 }
 
 .form-data {
@@ -95,7 +170,6 @@ main {
   background-color: #efefef;
   border-radius: 0.7rem;
   display: flex;
-  justify-content: space-between;
 }
 
 .registration-form {
@@ -105,6 +179,11 @@ main {
 
 .form-head h2 {
   padding: 1rem 1rem 0;
+  text-align: center;
+}
+
+.form-head h4 {
+  padding: 0 1rem 0;
   text-align: center;
 }
 
@@ -134,7 +213,7 @@ label {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0 0.7rem 0.7rem 0; 
+  border-radius: 0.7rem 0 0 0.7rem; 
 }
 
 /* FOOTER */
@@ -197,9 +276,6 @@ hr {
     height: fit-content;
     padding: 1rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .form-card {

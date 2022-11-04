@@ -12,34 +12,32 @@
   <link rel="stylesheet" href="css/club-reg.css">
   <!-- Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <title>SnT - Club Registration</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
+
       <div class="container">
-        <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt="" class=""></a>
+        <a class="navbar-brand" href="/index.html"><img src="./img/logo.png" alt="" class=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto ">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+            <li class="nav-item mt-3">
+              <a class="nav-link" href="/index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#join-us">About</a>
+            <li class="nav-item ">
+              <a class="nav-link" href="tel:+91 8740938806">8740938806(M)</a>
+              <a class="nav-link" href="tel:+91 6376438390">6376438390(M)</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#events-live">Resources</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-us">Contact</a>
-            </li>
-            <li class="nav-item" id="ogt">
-              <a class="nav-link" href="#events-live" class="ongoing"><strong>Register Now</strong></a>
+            <li class="nav-item mt-3">
+              <a class="nav-link" href="mailto:info.sntclub@gmail.com">info.sntclub@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -47,118 +45,297 @@
     </nav>
   </header>
   <main>
-    <div class="container-fluid">
-      <div class="form-card">
-        <div class="registration-form">
-          <div class="form-head">
-            <h2>Club Registration</h2>
+    <div class="tab-bar">
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active tab-links" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true">New Members</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link tab-links" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false" disabled>Existing Members</button>
+        </li>
+      </ul>
+    </div>
+    <div class="container-fluid tab-content" id="pills-tabContent">
+      <!-- New Members -->
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        tabindex="0">
+        <div class="form-card">
+          <div class="form-img">
+            <img src="./img/background3.jpg" alt="">
           </div>
-          <div class="form-body">
-            <form class="needs-validation" id="stuRegForm" novalidate>
-              <div class="mb-3">
-                <label for="name" class="form-label">
-                  Name
-                </label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name"
-                  required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Enter valid Name.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="email1" class="form-label">
-                  Email (Personal)
-                </label>
-                <input type="email" name="personal_email" id="email1" class="form-control" placeholder="name@gmail.com"
-                  required pattern="[a-z][a-z0-9_.]*@(gmail).com$">
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Enter valid Email.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="email2" class="form-label">
-                  Email (College)
-                </label>
-                <input type="email" name="college_email" id="email2" class="form-control" placeholder="b220000@skit.ac.in" 
-                required pattern="[a-z][a-z0-9_.]*@(skit).ac.in$">
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                <div class="invalid-feedback">
-                  Enter valid Email.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="roll" class="form-label">
-                  Roll Number
-                </label>
-                <input type="text" name="roll_no" id="roll" class="form-control" placeholder="00ESKCS000" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Enter valid Roll Number.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">
-                  Phone Number
-                </label>
-                <div class="input-group">
-                  <div class="input-group-text">+91</div>
-                  <input type="tel" name="phone" id="phone" class="form-control" placeholder="12345 67890" required
-                    pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
+          <div class="registration-form">
+            <div class="form-head">
+              <h2>Club Registration</h2>
+              <h4>2022-2023</h4>
+            </div>
+            <div class="form-body">
+              <form class="needs-validation" id="stuRegForm" novalidate>
+                <div class="mb-3">
+                  <label for="name" class="form-label">
+                    Name
+                  </label>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name"
+                    required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Enter valid Phone Number.
+                    Enter valid Name.
                   </div>
                 </div>
-              </div>
-              <div class="mb-3">
-                <label for="branch" class="form-label">
-                  Branch
-                </label>
-                <input type="text" name="branch" id="branch" class="form-control" placeholder="Enter your branch"
-                  required>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="mb-3">
+                  <label for="email1" class="form-label">
+                    Email (Personal)
+                  </label>
+                  <input type="email" name="personal_email" id="email1" class="form-control"
+                    placeholder="name@gmail.com" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid Email.
+                  </div>
                 </div>
-                <div class="invalid-feedback">
-                  Enter valid Branch.
+                <div class="mb-3">
+                  <label for="email2" class="form-label">
+                    Email (College)
+                  </label>
+                  <input type="email" name="college_email" id="email2" class="form-control"
+                    placeholder="b220000@skit.ac.in" required pattern="[a-z][a-z0-9_.]*@(skit).ac.in$">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid Email.
+                  </div>
                 </div>
-              </div>
-              <div class="mb-3">
-                <label for="year" class="form-label">
-                  Year
-                </label>
-                <input type="number" name="year" id="year" class="form-control" placeholder="Enter your year" required
-                min="1" max="4">
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="mb-3">
+                  <label for="roll" class="form-label">
+                    College ID
+                  </label>
+                  <input type="text" name="roll_no" id="roll" class="form-control" placeholder="b220000" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid College ID.
+                  </div>
                 </div>
-                <div class="invalid-feedback">
-                  Enter valid Year.
+                <div class="mb-3">
+                  <label for="phone" class="form-label">
+                    Phone Number
+                  </label>
+                  <div class="input-group">
+                    <div class="input-group-text">+91</div>
+                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="" required
+                      pattern="^\d{10}$">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Enter valid Phone Number.
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="w-12 pt-1">
-                <button id="regButton" type="submit" class="btn register-btn">Register</button>
-              </div>
-            </form>
+                <div class="mb-3">
+                  <label for="branch" class="form-label">
+                    Branch
+                  </label>
+                  <select class="form-select" name="branch" id="branch" aria-label="Default select example" required>
+                    <option selected disabled value="">Select your Branch</option>
+                    <option>CSE</option>
+                    <option>CS-AI</option>
+                    <option>CS-DS</option>
+                    <option>CS-IoT</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>CE</option>
+                    <option>EE</option>
+                    <option>ME</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Choose a Branch.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="year" class="form-label">
+                    Year
+                  </label>
+                  <select class="form-select" name="year" id="year" aria-label="Default select example" required>
+                    <option selected disabled value="">Select your Year</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Choose a Year.
+                  </div>
+                </div>
+                <div class="w-12 pt-1 d-flex">
+                  <button type="submit" class="btn register-btn" id="liveToastBtn">
+                    Register
+                  </button>
+                  <button id="resetButton" type="reset" class="btn reset-btn mx-2" onclick="fun()">Reset</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="form-img">
-          <img src="./img/background3.jpg" alt="">
+      </div>
+      <!-- Existing Members -->
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="1">
+        <div class="form-card">
+          <div class="form-img">
+            <img src="./img/background3.jpg" alt="">
+          </div>
+          <div class="registration-form">
+            <div class="form-head">
+              <h2>Existing Members</h2>
+              <h4>2022-2023</h4>
+            </div>
+            <div class="form-body">
+              <form class="needs-validation" id="extRegForm" novalidate>
+                <div class="mb-3">
+                  <label for="name" class="form-label">
+                    Name
+                  </label>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name"
+                    required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid Name.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email1" class="form-label">
+                    Email (Personal)
+                  </label>
+                  <input type="email" name="personal_email" id="email1" class="form-control"
+                    placeholder="name@gmail.com">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid Email.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email2" class="form-label">
+                    Email (College)
+                  </label>
+                  <input type="email" name="college_email" id="email2" class="form-control"
+                    placeholder="b220000@skit.ac.in" required pattern="[a-z][a-z0-9_.]*@(skit).ac.in$">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid Email.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="roll" class="form-label">
+                    Roll Number
+                  </label>
+                  <input type="text" name="roll_no" id="roll" class="form-control" placeholder="00ESKCS000" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter valid Roll Number.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">
+                    Phone Number
+                  </label>
+                  <div class="input-group">
+                    <div class="input-group-text">+91</div>
+                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="" required
+                      pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Enter valid Phone Number.
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="branch" class="form-label">
+                    Branch
+                  </label>
+                  <select class="form-select" name="branch" id="branch" aria-label="Default select example" required>
+                    <option selected disabled value="">Select your Branch</option>
+                    <option>CSE</option>
+                    <option>CS-AI</option>
+                    <option>CS-DS</option>
+                    <option>CS-IoT</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>CE</option>
+                    <option>EE</option>
+                    <option>ME</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Choose a Branch.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="year" class="form-label">
+                    Year
+                  </label>
+                  <select class="form-select" name="year" id="year" aria-label="Default select example" required>
+                    <option selected disabled value="">Select your Year</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Choose a Year.
+                  </div>
+                </div>
+                <div class="w-12 pt-1">
+                  <!-- <button id="regButton" type="submit" class="btn register-btn">Register</button> -->
+                  <button type="submit" class="btn register-btn" id="liveToastBtn">
+                    Register
+                  </button>
+                  <div class="submit-toast">
+                    <div class="toast align-items-center text-white bg-primary border-0" role="alert"
+                      aria-live="assertive" aria-atomic="true">
+                      <div class="d-flex">
+                        <div class="toast-body">
+                          Submitted! Thank you for your response...
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                          aria-label="Close"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </main>
   <!------------- Footer------------ -->
   <footer id="contact-us" class="page-footer font-small blue pt-4">
@@ -183,9 +360,9 @@
                 alt="discord"></a>
           </div>
         </div>
-
+<!-- 
         <div class="col-2 mx-auto footer-mid-div">
-          <!-- Links -->
+          Links
           <h5>S&T Club</h5>
           <ul class="list-unstyled footer-links">
             <li>
@@ -197,12 +374,12 @@
           </ul>
         </div>
         <div class="col-2 mx-auto footer-bottom-div">
-          <!-- Links -->
+        Links
           <h5>Resources</h5>
           <ul class="list-unstyled footer-links">
-            <!--<li>
+            <li>
               <a href="#dsa">DSA</a>
-            </li>-->
+            </li>
             <li>
               <a href="#python">Python</a>
             </li>
@@ -234,7 +411,7 @@
             </li>
           </ul>
 
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- Footer Links -->
@@ -251,6 +428,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>
     const paragraph = `
       <p>
@@ -258,77 +436,172 @@
       </p>
     `;
     document.getElementById("copyright").innerHTML = paragraph;
-  </script>
-  <script>
+    const toastDiv = document.querySelector(".submit-toast");
+    const regBtn = document.querySelector(".register-btn");
+    console.log(toastDiv);
+
+
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (() => {
-      'use strict'
-
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
+      const forms = document.querySelectorAll(".needs-validation");
+      // console.log(forms);
 
       // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          "submit",
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
 
-          form.classList.add('was-validated')
-        }, false)
+            form.classList.add("was-validated");
+          },
+          false
+        );
       });
-      var email = document.getElementById('email1');
-      email.oninput = () => {
-        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (!re.test(email.value)) {
-          email.setCustomValidity("Invalid field.");
-          email.classList.add('is-invalid');
+
+
+      var phoneNo = document.getElementById("phone");
+      phoneNo.oninput = () => {
+        if (/^\d{10}$/.test(phoneNo.value)) {
+          regBtn.disabled = false;
         } else {
-          email.classList.remove('is-invalid');
-          email.setCustomValidity("")
-        }
-      };
-      var email = document.getElementById('email2');
-      email.oninput = () => {
-        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (!re.test(email.value)) {
-          email.setCustomValidity("Invalid field.");
-          email.classList.add('is-invalid');
-        } else {
-          email.classList.remove('is-invalid');
-          email.setCustomValidity("")
+          regBtn.disabled = true;
         }
       }
 
-      function handleSubmit(event) {
+      var branch = document.getElementById('branch');
+      branch.oninput = () => {
+        if (branch.value.length > 0) {
+          regBtn.disabled = false;
+        } else {
+          regBtn.disabled = true;
+        }
+      }
+
+      var year = document.getElementById('year');
+      year.oninput = () => {
+        if (year.value.length > 0) {
+          regBtn.disabled = false;
+        } else {
+          regBtn.disabled = true;
+        }
+      }
+
+      var name = document.getElementById('name');
+      name.oninput = () => {
+        if (name.value.length > 0) {
+          regBtn.disabled = false;
+        } else {
+          regBtn.disabled = true;
+        }
+      }
+
+      var rollno = document.getElementById('roll');
+      rollno.oninput = () => {
+        if (rollno.value.length > 0) {
+          regBtn.disabled = false;
+        } else {
+          regBtn.disabled = true;
+        }
+      }
+
+      var email = document.getElementById("email1");
+      email.oninput = () => {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test(email.value)) {
+          email.setCustomValidity("Invalid field.");
+          email.classList.add("is-invalid");
+          regBtn.disabled = true;
+        } else {
+          email.classList.remove("is-invalid");
+          email.setCustomValidity("");
+          regBtn.disabled = false;
+        }
+      };
+      var email = document.getElementById("email2");
+      email.oninput = () => {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test(email.value)) {
+          email.setCustomValidity("Invalid field.");
+          email.classList.add("is-invalid");
+          regBtn.disabled = true;
+        } else {
+          email.classList.remove("is-invalid");
+          regBtn.disabled = false;
+          email.setCustomValidity("");
+        }
+      };
+
+      const handleSubmit = (event) => {
         event.preventDefault();
 
         const data = new FormData(event.target);
 
         const value = Object.fromEntries(data.entries());
+        if (value.branch != "" && typeof value.branch != undefined
+          && value.college_email != "" && typeof value.college_email != undefined
+          && value.name != "" && typeof value.name != undefined
+          && value.personal_email != "" && value.personal_email != undefined
+          && value.year != "" && value.year != undefined
+          && value.roll_no != "" && value.roll_no != undefined) {
+          regBtn.disabled = false;
+          console.log([value.branch, value.college_email, value.name, value.personal_email, value.phone, value.year, value.roll_no]);
+          fetch(
+            "https://science-and-technology-club-e6uye89dc-nitya-s27.vercel.app/users/register",
+            {
+              method: "POST", // or 'PUT'
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(value),
+            }
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success");
+              alert("Thanks for registering!");
+              document.location = 'https://chat.whatsapp.com/K8Vz2U3pu0n2ubelqmuuSJ';
+              // $(document).ready(function () {
+              //   regBtn.onclick = function () {
+              //     $('.toast').toast('show');
+              //   }
+              // })
 
-        fetch('https://science-and-technology-club-e6uye89dc-nitya-s27.vercel.app/users/register', {
-          method: 'POST', // or 'PUT'
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(value),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log({ value });
-            console.log('Success:', value);
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.location = 'https://forms.gle/qo94qAe1YfgmVSWy7';
+            });
+        }
+        else {
+          // regBtn.disabled = true;
+          alert("Enter valid details.")
+        }
 
-      }
 
-      document.getElementById("stuRegForm").addEventListener("submit", handleSubmit);
+      };
 
-    })()
+      document
+        .getElementById("stuRegForm")
+        .addEventListener("submit", handleSubmit);
+    })();
+  </script>
+  <script>
+    function fun() {
+      document.getElementById('name').value = '';
+      document.getElementById('email1').value = '';
+      document.getElementById('email2').value = '';
+      document.getElementById('roll').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('branch').value = '';
+      document.getElementById('year').value = '';
+    }
   </script>
 </body>
 
