@@ -18,6 +18,7 @@ body {
 p {
   color: var(--dark-blue);
 }
+
 h1 {
   font-size: 72px;
   font-weight: 700;
@@ -33,6 +34,7 @@ h6 {
   font-weight: 700;
   color: var(--dark-blue);
 }
+
 em {
   color: #ef5a67;
   font-weight: 700;
@@ -78,6 +80,7 @@ a.nav-link {
   text-align: center;
   border-radius: 10px;
   transition: all 0.8s ease-in-out;
+  margin-left: 1rem;
 }
 #ogt:hover {
   box-shadow: 0 0 10px #fff;
@@ -593,6 +596,40 @@ hr{
   border-right: 1px solid;
 }
 
+/* MODAL */
+
+.modal-content {
+  background: linear-gradient(30deg, #0A146E, #832A8F);
+}
+
+.modal-body img {
+  width: 100%;
+}
+
+.modal-text {
+  color: #ffffff;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.modal-footer button {
+  width: 100%;
+}
+
+.modal-btn {
+  background-color: var(--primary-btn);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.modal-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ef5a67;
+  border-color: #ef5a67;
+}
+
 @media (max-width: 1256px) {
   .course-arrow {
     position: absolute;
@@ -607,16 +644,6 @@ hr{
   .st-mobile{
     display: none;
   }
-}
-
-/* MODAL */
-
-.modal-body img {
-  width: 100%;
-}
-
-.modal-body h3 {
-  color: var(--dark-blue);
 }
 
 @media (max-width: 1070px) {

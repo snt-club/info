@@ -2078,12 +2078,20 @@ footer h5 {
   text-decoration: underline;
 }
 
+hr{
+  width: 90%;
+  margin: auto;
+  opacity: 100;
+  background: #ffffff;
+}
+
 .footer-copyright {
-  background-color: #053fa2;
+  background-color: var(--dark-blue)2;
   font-size: 0.9rem;
 }
-#copyright {
-  color: #fff;
+
+.footer-copyright p {
+  color: #ffffff;
 }
 
 .icons img:hover {
