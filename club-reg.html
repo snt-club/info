@@ -54,8 +54,8 @@
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link tab-links" id="pills-profile-tab" data-bs-toggle="pill"
-            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
-            disabled>Existing Members</button>
+            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+            aria-selected="false">Existing Members</button>
         </li>
       </ul>
     </div>
@@ -246,7 +246,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="roll" class="form-label">
+                  <label for="rollExt" class="form-label">
                     Roll Number
                   </label>
                   <input type="text" name="roll_no_Ext" id="rollExt" class="form-control" placeholder="00ESKCS000"
@@ -259,7 +259,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="phone" class="form-label">
+                  <label for="phoneExt" class="form-label">
                     Phone Number
                   </label>
                   <div class="input-group">
@@ -275,7 +275,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="branch" class="form-label">
+                  <label for="branchExt" class="form-label">
                     Branch
                   </label>
                   <select class="form-select" name="branch_Ext" id="branchExt" aria-label="Default select example"
@@ -299,7 +299,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="year" class="form-label">
+                  <label for="yearExt" class="form-label">
                     Year
                   </label>
                   <select class="form-select" name="year_Ext" id="yearExt" aria-label="Default select example" required>
@@ -317,7 +317,7 @@
                 </div>
                 <div class="w-12 pt-1">
                   <!-- <button id="regButton" type="submit" class="btn register-btn">Register</button> -->
-                  <button type="submit" class="btn register-btn" id="liveToastBtn regButtonExt">
+                  <button type="submit" class="btn register-btn reg-btn-ext" id="liveToastBtn">
                     Register
                   </button>
                   <div class="submit-toast">
@@ -549,6 +549,7 @@
 
         const value = Object.fromEntries(data.entries());
         if (value.branch != "" && typeof value.branch != undefined
+          && value.phone != "" && typeof value.phone != undefined
           && value.college_email != "" && typeof value.college_email != undefined
           && value.name != "" && typeof value.name != undefined
           && value.personal_email != "" && value.personal_email != undefined
@@ -557,7 +558,7 @@
           regBtn.disabled = false;
           console.log([value.branch, value.college_email, value.name, value.personal_email, value.phone, value.year, value.roll_no]);
           fetch(
-            "https://science-and-technology-club-q2cxqs757-nitya-s27.vercel.app/users/register",
+            "https://science-and-technology-club-bm03sg8ky-nitya-s27.vercel.app/users/register",
             {
               method: "POST", // or 'PUT'
               headers: {
@@ -596,134 +597,145 @@
         .addEventListener("submit", handleSubmit);
 
 
+      const regButtonExt = document.querySelector(".reg-btn-ext");
+
+      var phoneNoExt = document.getElementById("phoneExt");
+      phoneNoExt.oninput = () => {
+        if (/^\d{10}$/.test(phoneNoExt.value)) {
+          regButtonExt.disabled = false;
+        } else {
+          regButtonExt.disabled = true;
+        }
+      }
+
+      var branchExt = document.getElementById('branchExt');
+      branchExt.oninput = () => {
+        if (branchExt.value.length > 0) {
+          regButtonExt.disabled = false;
+        } else {
+          regButtonExt.disabled = true;
+        }
+      }
+
+      var yearExt = document.getElementById('yearExt');
+      yearExt.oninput = () => {
+        if (yearExt.value.length > 0) {
+          regButtonExt.disabled = false;
+        } else {
+          regButtonExt.disabled = true;
+        }
+      }
+
+      var nameExt = document.getElementById('nameExt');
+      nameExt.oninput = () => {
+        if (nameExt.value.length > 0) {
+          regButtonExt.disabled = false;
+        } else {
+          regButtonExt.disabled = true;
+        }
+      }
+
+      var rollnoExt = document.getElementById('rollExt');
+      rollnoExt.oninput = () => {
+        if (rollnoExt.value.length > 0) {
+          regButtonExt.disabled = false;
+        } else {
+          regButtonExt.disabled = true;
+        }
+      }
+
+      var emailExt = document.getElementById("email1Ext");
+      emailExt.oninput = () => {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test(emailExt.value)) {
+          emailExt.setCustomValidity("Invalid field.");
+          emailExt.classList.add("is-invalid");
+          regButtonExt.disabled = true;
+        } else {
+          emailExt.classList.remove("is-invalid");
+          emailExt.setCustomValidity("");
+          regButtonExt.disabled = false;
+        }
+      };
+      var emailExt = document.getElementById("email2");
+      emailExt.oninput = () => {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test(emailExt.value)) {
+          emailExt.setCustomValidity("Invalid field.");
+          emailExt.classList.add("is-invalid");
+          regButtonExt.disabled = true;
+        } else {
+          emailExt.classList.remove("is-invalid");
+          regButtonExt.disabled = false;
+          emailExt.setCustomValidity("");
+        }
+      };
+
+      const handleSubmitExt = (event) => {
+        event.preventDefault();
+
+        const data = new FormData(event.target);
+
+        const value = Object.fromEntries(data.entries());
+        if (value.branch_Ext != "" && typeof value.branch_Ext != undefined && value.phone_Ext != "" && typeof value.phone_Ext != undefined
+          && value.college_email_Ext != "" && typeof value.college_email_Ext != undefined
+          && value.name_Ext != "" && typeof value.name_Ext != undefined
+          && value.personal_email_Ext != "" && value.personal_email_Ext != undefined
+          && value.year_Ext != "" && value.year_Ext != undefined
+          && value.roll_no_Ext != "" && value.roll_no_Ext != undefined) {
+          regButtonExt.disabled = false;
+          // console.log(value);
+          let valueCopy = {
+            name: value.name_Ext,
+            roll_no: value.roll_no_Ext,
+            college_email: value.college_email_Ext,
+            personal_email: value.personal_email_Ext,
+            phone: value.phone_Ext,
+            branch: value.branch_Ext,
+            year: value.year_Ext
+          }
+          // console.log(valueCopy);
+          // console.log([value.branch, value.college_email, value.name, value.personal_email, value.phone, value.year, value.roll_no]);
+          fetch(
+            "https://snt-existing-user-registration-jj82bf09l-nitya-s27.vercel.app/users/register",
+            {
+              method: "POST", // or 'PUT'
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(valueCopy),
+            }
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success");
+              alert("Thanks for registering!");
+              document.location = 'https://chat.whatsapp.com/K8Vz2U3pu0n2ubelqmuuSJ';
+              // $(document).ready(function () {
+              //   regBtn.onclick = function () {
+              //     $('.toast').toast('show');
+              //   }
+              // })
+
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.location = 'https://forms.gle/qo94qAe1YfgmVSWy7';
+            });
+        }
+        else {
+          // regBtn.disabled = true;
+          alert("Enter valid details.")
+        }
 
 
-      // var phoneNoExt = document.getElementById("phoneExt");
-      // phoneNoExt.oninput = () => {
-      //   if (/^\d{10}$/.test(phoneNoExt.value)) {
-      //     regButtonExt.disabled = false;
-      //   } else {
-      //     regButtonExt.disabled = true;
-      //   }
-      // }
+      };
 
-      // var branchExt = document.getElementById('branchExt');
-      // branchExt.oninput = () => {
-      //   if (branchExt.value.length > 0) {
-      //     regButtonExt.disabled = false;
-      //   } else {
-      //     regButtonExt.disabled = true;
-      //   }
-      // }
-
-      // var yearExt = document.getElementById('yearExt');
-      // yearExt.oninput = () => {
-      //   if (yearExt.value.length > 0) {
-      //     regButtonExt.disabled = false;
-      //   } else {
-      //     regButtonExt.disabled = true;
-      //   }
-      // }
-
-      // var nameExt = document.getElementById('nameExt');
-      // nameExt.oninput = () => {
-      //   if (nameExt.value.length > 0) {
-      //     regButtonExt.disabled = false;
-      //   } else {
-      //     regButtonExt.disabled = true;
-      //   }
-      // }
-
-      // var rollnoExt = document.getElementById('rollExt');
-      // rollnoExt.oninput = () => {
-      //   if (rollnoExt.value.length > 0) {
-      //     regButtonExt.disabled = false;
-      //   } else {
-      //     regButtonExt.disabled = true;
-      //   }
-      // }
-
-      // var emailExt = document.getElementById("email1Ext");
-      // emailExt.oninput = () => {
-      //   const re =
-      //     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      //   if (!re.test(emailExt.value)) {
-      //     emailExt.setCustomValidity("Invalid field.");
-      //     emailExt.classList.add("is-invalid");
-      //     regButtonExt.disabled = true;
-      //   } else {
-      //     emailExt.classList.remove("is-invalid");
-      //     emailExt.setCustomValidity("");
-      //     regButtonExt.disabled = false;
-      //   }
-      // };
-      // var emailExt = document.getElementById("email2");
-      // emailExt.oninput = () => {
-      //   const re =
-      //     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      //   if (!re.test(emailExt.value)) {
-      //     emailExt.setCustomValidity("Invalid field.");
-      //     emailExt.classList.add("is-invalid");
-      //     regButtonExt.disabled = true;
-      //   } else {
-      //     emailExt.classList.remove("is-invalid");
-      //     regButtonExt.disabled = false;
-      //     emailExt.setCustomValidity("");
-      //   }
-      // };
-
-      // const handleSubmitExt = (event) => {
-      //   event.preventDefault();
-
-      //   const data = new FormData(event.target);
-
-      //   const value = Object.fromEntries(data.entries());
-      //   if (value.branch_Ext != "" && typeof value.branch_Ext != undefined
-      //     && value.college_email_Ext != "" && typeof value.college_email_Ext != undefined
-      //     && value.name_Ext != "" && typeof value.name_Ext != undefined
-      //     && value.personal_email_Ext != "" && value.personal_email_Ext != undefined
-      //     && value.year_Ext != "" && value.year_Ext != undefined
-      //     && value.roll_no_Ext != "" && value.roll_no_Ext != undefined) {
-      //     regButtonExt.disabled = false;
-      //     // console.log([value.branch, value.college_email, value.name, value.personal_email, value.phone, value.year, value.roll_no]);
-      //     fetch(
-      //       "https://science-and-technology-club-e6uye89dc-nitya-s27.vercel.app/users/register",
-      //       {
-      //         method: "POST", // or 'PUT'
-      //         headers: {
-      //           "Content-Type": "application/json",
-      //         },
-      //         body: JSON.stringify(value),
-      //       }
-      //     )
-      //       .then((response) => response.json())
-      //       .then((data) => {
-      //         console.log("Success");
-      //         alert("Thanks for registering!");
-      //         document.location = 'https://chat.whatsapp.com/K8Vz2U3pu0n2ubelqmuuSJ';
-      //         // $(document).ready(function () {
-      //         //   regBtn.onclick = function () {
-      //         //     $('.toast').toast('show');
-      //         //   }
-      //         // })
-
-      //       })
-      //       .catch((error) => {
-      //         console.error("Error:", error);
-      //         document.location = 'https://forms.gle/qo94qAe1YfgmVSWy7';
-      //       });
-      //   }
-      //   else {
-      //     // regBtn.disabled = true;
-      //     alert("Enter valid details.")
-      //   }
-
-
-      // };
-
-      // document
-      //   .getElementById("extRegForm")
-      //   .addEventListener("submit", handleSubmitExt);
+      document
+        .getElementById("extRegForm")
+        .addEventListener("submit", handleSubmitExt);
 
 
     })();

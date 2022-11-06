@@ -150,7 +150,7 @@ main {
   transition: 0.05s ease-in-out;
 }
 
-#pills-profile-tab {
+/* #pills-profile-tab {
   cursor: not-allowed;
   background-color: #ffffff;
   color: gray;
@@ -160,7 +160,7 @@ main {
   cursor: not-allowed;
   background-color: #ffffff !important;
   color: gray !important;
-}
+} */
 
 .form-data {
   display: flex;
