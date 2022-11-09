@@ -630,6 +630,10 @@ hr{
   border-color: #ef5a67;
 }
 
+.modal .modal-text-h2 {
+  font-weight: bold;
+}
+
 @media (max-width: 1256px) {
   .course-arrow {
     position: absolute;
