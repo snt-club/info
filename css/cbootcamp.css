@@ -1,3 +1,9 @@
+:root {
+  --primary-btn: #ef5a67;
+  --dark-blue: #022f84;
+  --light-blue: #053fa2;
+}
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
@@ -2082,11 +2088,11 @@ hr{
   width: 90%;
   margin: auto;
   opacity: 100;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 .footer-copyright {
-  background-color: var(--dark-blue)2;
+  background-color: var(--dark-blue);
   font-size: 0.9rem;
 }
 
@@ -2205,11 +2211,11 @@ h2 {
 }
 
 .container1.left .date {
-  right: -75px;
+  right: -85px;
 }
 
 .container1.right .date {
-  left: -75px;
+  left: -85px;
 }
 
 .container1 .icon {
@@ -2298,7 +2304,7 @@ h2 {
   .container1.left .date,
   .container1.right .date {
     right: auto;
-    left: 15px;
+    left: 6px;
   }
 
   .container1.left .icon,
