@@ -2323,3 +2323,12 @@ h2 {
 .col-3 {
   max-width: 100%;
 }
+
+.event-poster {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.event-poster-img {
+  height: 500px;
+}
