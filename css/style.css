@@ -605,6 +605,10 @@ hr{
   width: 100%;
 }
 
+.modal-title {
+  color: #ffffff;
+}
+
 .modal-text {
   color: #ffffff;
 }
